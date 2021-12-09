@@ -15,8 +15,9 @@
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
          <children>
-            <Button mnemonicParsing="false" text="Find a Solution" />
-            <TextField />
+            <Label fx:id="timeLabel" text="Time used: " />
+            <Button mnemonicParsing="false" onAction="#solBtnAction" text="Find a Solution" />
+            <TextField fx:id="solutionTxtField" />
             <Button mnemonicParsing="false" onAction="#refreshImages" text="Refresh" />
          </children>
       </HBox>
@@ -31,8 +32,8 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
          <children>
             <Label text="Enter an expression:" />
-            <TextField />
-            <Button mnemonicParsing="false" text="Verify" />
+            <TextField fx:id="expTxtField" />
+            <Button mnemonicParsing="false" onAction="#verifyBtnAction" text="Verify" />
          </children>
       </HBox>
    </children>

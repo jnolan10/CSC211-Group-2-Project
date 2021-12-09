@@ -4,7 +4,10 @@ package com.mycompany.playingcards24_fxml;
 import java.io.FileInputStream;
 import java.util.Scanner;
 
-
+/**
+ *
+ * @author jonat
+ */
 public class cardInfo {
     
     private cardInfo club2;
@@ -62,31 +65,55 @@ public class cardInfo {
     private String cardName;
     private int cardNum;
     
+    //constructor with integer and string parameter to 
+    //assure every card image has a numerical value associated
     cardInfo(int num, String name){
         this.cardNum = num;
         this.cardName = name;
     }
     
+    //default constructor to initialize the deck of 52 cards
     cardInfo(){
         initializeCards();
     }
     
+    /**
+     *returns card name string for given instance
+     * @return
+     */
     public String getCardName() {
         return cardName;
     }
 
+    /**
+     *change cardName string for given instance
+     * @param cardName
+     */
     public void setCardName(String cardName) {
         this.cardName = cardName;
     }
 
+    /**
+     *returns cardNum for given instance
+     * @return
+     */
     public int getCardNum() {
         return cardNum;
     }
 
+    /**
+     *change card num value 
+     * @param cardNum
+     */
     public void setCardNum(int cardNum) {
         this.cardNum = cardNum;
     }
     
+    /**
+     *initialize each card in a deck of 52 
+     * to a String which points to a file in the resource folder
+     * containing all card images 
+     */
     public void initializeCards(){
     club2 = new cardInfo(2,"2_of_clubs.png");
     club3 = new cardInfo(3,"3_of_clubs.png");
@@ -143,6 +170,11 @@ public class cardInfo {
     
     }
     
+    /**
+     *initializes an array using given string values from previous method
+     * and returns said array
+     * @return
+     */
     public cardInfo[] initializeArr(){
         cardInfo[] cInfo = {
     club2,
